@@ -4,7 +4,7 @@ app.factory('ReviewService',
 					
 						getCategory : function() {
 							return $http({
-								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/getCategory',
+								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/home.jsp#/getCategory',
 								method : 'POST',
 								header : {
 									accept : 'application/json'
@@ -14,7 +14,8 @@ app.factory('ReviewService',
 					
 						addReview : function( reviewFormObject) {
 							return $http({
-								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/addReview',
+								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/home.jsp#/addReview',
+								
 							//	url : 'http://localhost:8080/ReviewBox/addReview',
 								method : 'POST',
 								header : {
@@ -29,7 +30,7 @@ app.factory('ReviewService',
 						
 						addCategory : function(addCatObj) {
 							return $http({
-								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/addCategory',
+								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/home.jsp#/addCategory',
 								method : 'POST',
 								header : {
 									accept : 'application/json'
@@ -41,7 +42,7 @@ app.factory('ReviewService',
 						
 						readReview : function(catid) {
 							return $http({
-								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/readReview'
+								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/home.jsp#/readReview'
 							//	url:'http://localhost:8080/ReviewBox/home.jsp#/readReview'
 								,
 								method : 'POST',
@@ -53,7 +54,7 @@ app.factory('ReviewService',
 						},
 						categoryList : function() {
 							return $http({
-								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/listcat',
+								url : 'http://rv-sonal.44fs.preview.openshiftapps.com/home.jsp#/listcat',
 								method : 'POST',
 								header : {
 									accept : 'application/json'
