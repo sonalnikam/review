@@ -1,0 +1,23 @@
+#sidebar-menu a:hover {
+	background-color: #112233;
+	color: white;
+}
+
+#sidebar-menu a:active {
+	background-color: #14171A;
+	color: white;
+}
+
+.logo_col {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.logo_pic {
+	max-height: 100px;
+	max-width: 180px;
+}
+.label
+{
+	font-size: 100%;
+}

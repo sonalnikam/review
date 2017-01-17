@@ -1,0 +1,145 @@
+<head>
+  <link href="resources/css/common/umarCustom.css" rel="stylesheet">
+
+</head>
+<!--Page title-->
+<div class="page-title">
+	<div class="title_left">
+		<h3>
+			<a class="btn btn-default btn-lg" style="border-radius: 30px;"
+				type="button" ui-sref="home"> <span><i
+					class="fa fa-arrow-left"></i></span>
+			</a> Read Review
+		</h3>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="row">
+
+	<div class="col-md-12 col-sm-12 col-xs-12">
+
+		<div class="x_panel" style="text-align:center">
+
+
+			<div class="x_content" >
+
+				<br />
+				
+				
+				<form id="add-review-form" method="post">
+				<fieldset>
+				<legend >Read Reviews</legend>
+
+					<div class="form-group">
+						<label 
+							for="catname">Category <span class="required">*</span>
+						</label>
+						<div >
+							<select id="catname" name="catname"
+								ng-model="newReview.catid" required="required" ng-init="categoryList()" required>
+								<option value="{{category.catid}}" ng-repeat="category in category.data">{{category.catname}}</option>
+							</select>
+						</div>
+						
+						<br>
+						<br>
+						
+						
+						<div class="form-group">
+						<div >
+							<button type="submit" 
+								ng-click=readReview(newReview.catid)>Submit</button>
+							<input type="reset"  value="Reset">
+							
+							
+						
+
+						</div>
+					</div>
+					</div>
+					</fieldset>
+				</form>
+				
+				
+				
+				</div>
+				</div>
+				</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				
+
+
+
+<div >
+
+<table style="width: 100%">
+<thead>
+	<caption><b><u></b><font size="60">Review Details</font></caption>
+	<tr>
+								
+								<th>ReviewId</th>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Rating</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+							<tr
+								ng-repeat="review in review.data">
+								
+								<td>{{review.revid}}</td>
+								<td>{{review.title}}</td>
+								<td>{{review.description}}</td>
+								<td>{{review.rating}}</td>
+							
+							</tr>
+
+						</tbody>
+	
+	
+</table>
+
+</div>
+
+
+
+
+
+<!-- 
+
+<div class="table-responsive" >
+					<table
+						class="data table table-striped table-condensed table-hover table-condensed"
+						style="text-align: center; vertical-align: middle;">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>ReviewId</th>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Rating</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr
+								ng-repeat="review in review.data">
+								
+								<td>{{review.revid}}</td>
+								<td>{{review.title}}</td>
+								<td>{{review.description}}</td>
+								<td>{{review.rating}}</td>
+							
+							</tr>
+
+						</tbody>
+					</table>
+				
+				</div>  -->
+				
+		

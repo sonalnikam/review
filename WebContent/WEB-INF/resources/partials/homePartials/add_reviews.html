@@ -1,0 +1,168 @@
+
+<!--Page title-->
+
+
+<head>
+  <link href="resources/css/common/umarCustom.css" rel="stylesheet">
+  
+  <script>
+  function SubmitSuccess()($window, $scope) {
+      $scope.hello = function () {
+          $window.alert('Hi! ');
+      }
+  }
+  </script>
+
+</head>
+
+
+
+
+<div class="clearfix"></div>
+<div class="row">
+
+	<div class="col-md-12 col-sm-12 col-xs-12">
+
+		<div class="x_panel">
+
+			<div class="x_title">
+				<h2>Read & write your Reviews Here</h2>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="x_content">
+
+				<br />
+				
+				
+				
+					<!-- //Add category -->
+					<h3>Categories are already 
+
+populated in dropdown If you want to add any new Category then click 
+
+here.</h3>
+					<div class="form-group" 
+
+style="width: 400px; margin:auto;">
+						<form name="myForm"><div>
+						<label for="addcatname">Add Category<span class="required">*</span>
+						</label>
+					 </div>  
+						
+						<div >
+						
+							<input type="text" id="addcatname"  ng-model="newReview.addcatname" required >
+								<br>
+							
+							 <span ng-if="newReview.addcatname!=null && newReview.addcatname!=''">  
+						
+							<button type="submit" ng-click=addCategory(newReview.addcatname)>Add New Category</button>
+								
+
+</span></div>
+							
+                  </div>
+						</form>
+						
+						<br>
+			
+				
+				<form id="add-review-form" method="post" onSubmit="alert('review is added sucessfully.');">
+				<fieldset>
+				<legend >Add Reviews</legend>
+				
+		
+				
+				
+				
+					<div class="form-group">
+						<label 
+							
+
+for="catname">Category <span class="required">*</span>
+						</label>
+						<div >
+							<select id="catname" name="catname"
+								ng-model="newReview.catid" required="required" ng-init="categoryList()" required>
+								<option value="{{category.catid}}" ng-repeat="category in category.data"  >{{category.catname}}</option>
+							</select>
+							
+						</div>
+						
+					</div>
+					<div class="form-group">
+						<label for="title">Title<span class="required">*</span>
+						</label>
+						<div >
+							<input type="text" id="title" required="required"
+								ng-model="newReview.title"
+								>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label 
+							for="description">Description <span class="required">*</span>
+						</label>
+						<div >
+							<input type="text" id="description" name="description"
+								ng-model="newReview.description" required="required"
+								>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="rating">rating<span class="required">*</span>
+						</label>
+						<div>
+							<input type="text" id="rating" name="rating"
+								ng-model="newReview.rating" required="required"
+								 onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" /> 
+					
+                       
+
+                        
+    <span id="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
+
+								
+						</div>
+					</div>
+
+					<p></p>
+
+
+				
+
+					<div class="form-group">
+						<div >
+							<!-- <button type="submit"  -->
+							<!-- 	ng-click=addReview(newReview.title,newReview.description,newReview.rating,newReview.catid)"notification.status = 'show'; notification.message = 'your review is submitted sucessfully'; notification.type = 'info';">Submit</button> -->
+							 <button type="submit" 
+							 ng-click="addReview(newReview.title,newReview.description,newReview.rating,newReview.catid)">Submit
+
+</button>
+
+						</div>
+					</div>
+					</fieldset>
+				</form>
+				
+				</div>
+				</div>
+				</div>
+				
+<script type="text/javascript"src="resources/js/common/input_mask/jquery.inputmask.js"></script>
+	<!-- input_mask -->
+	<script>
+		$(document).ready(function() {
+			$(":input").inputmask();
+		});
+	</script>
+	<!-- /input mask -->
+
+</div>
+</div>
+
+<!-- /page content -->
+				
