@@ -130,6 +130,12 @@
 			<version>1.0.0.GA</version>
 			<scope>provided</scope>
 		</dependency>
+	   <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.1</version>
+        <scope>provided</scope>
+    </dependency>
 
 		<!-- Apache Commons Upload -->
 		<dependency>
